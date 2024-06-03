@@ -6,9 +6,5 @@ const router=express.Router();
 
 router.post('/login',signin )
 router.post('/signup',signup )
-router.get('/login',signin )
-router.get('/signup',signup )
-
-
 
 export default router;
