@@ -1,5 +1,5 @@
 import validator from "validator";
-import { locales } from "validator/lib/isIBAN";
+// import { locales } from "validator/lib/isIBAN";
 
 class signupvalidation{
     public checkname(name:string):boolean {
