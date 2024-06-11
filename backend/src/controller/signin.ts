@@ -1,12 +1,34 @@
 import { Application,Request,Response, NextFunction } from "express";
 import Authdao from "../dao/authDao";
+import mongoconnect from "../model/dbdata";
+import { usermodel } from "../model/schema";
 
 
-function signin(req:Request,res:Response,next:NextFunction){
-    const Authdata=req.body;
-    let authdao= new Authdao();
-    let response= authdao.receivedata(Authdata)
+async function signin(req:Request,res:Response,next:NextFunction){
+    // console.log(req.body)
+    const finduser=new mongoconnect();
+    finduser.connection(res);
+        const {email, password }=req.body
+        try {
+            const user = await usermodel.findOne({email,password})
+            if (user){
 
-    res.send(response);
+               return res.json({status:'ok',user: true})
+            }else {
+                return res.json({status:'error', user: false})
+            }
+            
+        } catch (error) {
+        console.error('user not found', error)
+    }
 }
-export default signin;
+        
+   
+    
+    // const Authdata=req.body;
+    // let authdao= new Authdao();
+    // let response= authdao.receivedata(Authdata)
+
+    // res.json('hey');
+
+export default signin; 

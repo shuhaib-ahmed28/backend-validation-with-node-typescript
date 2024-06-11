@@ -4,8 +4,7 @@ class Authsignup{
         let signupvalidate= new signupvalidation;
         if (signupvalidate.checkname(signupdao.name)&& 
             signupvalidate.checkemail(signupdao.email)&& 
-            signupvalidate.checkpassword(signupdao.password)&&
-            signupvalidate.checknumber(signupdao.mobileno)){
+            signupvalidate.checkpassword(signupdao.password)){
             return ('succcefully registered')
         }else {
             return ('fill correct values')
