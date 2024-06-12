@@ -15,8 +15,9 @@ async function signin(req:Request,res:Response,next:NextFunction){
 
                return res.json({status:'ok',user: true})
             }else {
-                return res.json({status:'error', user: false})
+                return res.json({status:'user not found', user: false})
             }
+          
             
         } catch (error) {
         console.error('user not found', error)

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {toast} from 'react-hot-toast'
 
 const Login = () => {
   const navigate = useNavigate();
@@ -15,10 +16,11 @@ const Login = () => {
       console.log(res);
       if(res.status == 200){
         if(res.data.user){
+          toast.success('Login Successful, Welcome ' )
           navigate('/');
-        }
-      }else{
-
+        }else{
+          toast.error('Enter Valid credentials ') 
+      }
       }
     })
   

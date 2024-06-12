@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Login from './components/Login';
 import Home from './components/Home';
+import {Toaster} from 'react-hot-toast'
 import axios from 'axios'
 
 // axios.defaults.baseURL='http://localhost:8000'
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       {/* <Backendconnect/> */}
        <Navigation/>
+       <Toaster position='top-center' toastOptions={{duration:2000}}/>
        <Routes>
         <Route path='/' element={ <Home/>}/>
         <Route path='/signup' element={ <Signup/>}/>

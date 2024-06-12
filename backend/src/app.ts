@@ -4,6 +4,7 @@ import router from "./router/router";
 import bodyParser from "body-parser";
 import cors from 'cors';
 
+
 const port:number=8000;
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cors())

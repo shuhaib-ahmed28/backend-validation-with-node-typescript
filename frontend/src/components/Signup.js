@@ -10,7 +10,7 @@ const Signup = () => {
 
     const registerUser=(e)=>{
         e.preventDefault()  
-        axios.post('http://localhost:8000/signup', data)  
+        axios.post('http://localhost:8000/signup', data) 
     }
     return (
         <div>
