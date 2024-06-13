@@ -1,0 +1,28 @@
+.cardstructure{
+    width: 300px;
+    height: 450px;
+    position: relative;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+}
+
+.outer> img{
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+}
+.inner> img{
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+}
+.inner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.cardstructure:hover .inner{
+    display: block;
+}
