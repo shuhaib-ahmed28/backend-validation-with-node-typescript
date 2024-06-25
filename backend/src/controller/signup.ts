@@ -12,7 +12,7 @@ async function signup (req:Request,res:Response,next:NextFunction){
         const user =await usermodel.create(req.body);
         console.log('user created:' ,user);
         res.send(user)
-    }catch(error){
+    }catch(error){  
         console.error('Error while creating user:', error)
     }
 
