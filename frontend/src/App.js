@@ -7,9 +7,8 @@ import Navigation from './components/Navigation';
 import Login from './components/Login';
 import Home from './components/Home';
 import {Toaster} from 'react-hot-toast'
-import axios from 'axios'
 
-// axios.defaults.baseURL='http://localhosvst:8000'
+// axios.defaults.baseURL='http://localhost:8000'
 // axios.defaults.withCredentials = true
 
 function App() {
